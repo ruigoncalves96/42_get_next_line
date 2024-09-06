@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 22:59:44 by randrade          #+#    #+#             */
-/*   Updated: 2024/09/05 22:47:34 by randrade         ###   ########.fr       */
+/*   Updated: 2024/09/06 14:35:32 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 char	*get_next_line(int fd);
 int		ft_strlen_gnl(char *str);
+int		ft_cleanbuf_gnl(char *str);
 char	*ft_strjoin_gnl(char *s1, char *s2);
-int	ft_cleanbuf_gnl(char *str);
 
 #endif
