@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 14:39:05 by randrade          #+#    #+#             */
-/*   Updated: 2024/09/06 14:32:43 by randrade         ###   ########.fr       */
+/*   Updated: 2024/09/09 13:20:24 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*get_next_line(int fd)
 {
-	static char	buffer[1024][BUFFER_SIZE + 1];
+	static char	buffer[FOPEN_MAX][BUFFER_SIZE + 1];
 	char		*new_line;
 
-	if (fd < 0 || fd > 1024 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd > FOPEN_MAX || BUFFER_SIZE <= 0)
 		return (NULL);
 	new_line = NULL;
 	if (!buffer[fd][0])
