@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_main.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: randrade <randrade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/02 11:12:02 by randrade          #+#    #+#             */
-/*   Updated: 2024/09/06 13:46:26 by randrade         ###   ########.fr       */
+/*   Created: 2024/09/11 18:59:21 by randrade          #+#    #+#             */
+/*   Updated: 2024/09/12 12:53:06 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../get_next_line.h"
-#include <stdio.h>
-#include <fcntl.h>
 
 int	main(void)
 {

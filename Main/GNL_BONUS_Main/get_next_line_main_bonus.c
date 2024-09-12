@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_main_bonus.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: randrade <randrade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/02 11:12:02 by randrade          #+#    #+#             */
-/*   Updated: 2024/09/06 12:04:36 by randrade         ###   ########.fr       */
+/*   Created: 2024/09/11 18:59:36 by randrade          #+#    #+#             */
+/*   Updated: 2024/09/12 13:06:05 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../get_next_line_bonus.h"
-#include <fcntl.h>
+# include "../../get_next_line_bonus.h"
+
+# define FILE_NBR 5
 
 int	main(void)
 {
-	int	fd[6];
+	int	fd[FILE_NBR];
 	char	*line;
 	int	i;
 	int	finished_files;
@@ -26,11 +27,10 @@ int	main(void)
 	fd[2] = open("GNL_BONUS_Main/nl.txt", O_RDONLY);
 	fd[3] = open("GNL_BONUS_Main/no_nl.txt", O_RDONLY);
 	fd[4] = open("GNL_BONUS_Main/empty.txt", O_RDONLY);
-	fd[5] = open("GNL_BONUS_Main/words.txt", O_RDONLY);
 
 	finished_files = 0;
 	i = 0;
-	while (i < 6)
+	while (i < FILE_NBR)
 	{
 		if (fd[i++] < 0)
 		{
@@ -40,10 +40,10 @@ int	main(void)
 		}
 	}
 
-	while (finished_files < 6)
+	while (finished_files < FILE_NBR)
 	{
 		i = 0;
-		while (i < 6)
+		while (i < FILE_NBR)
 		{
 			if (fd[i] != -1)
 			{
