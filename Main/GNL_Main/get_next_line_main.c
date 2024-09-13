@@ -28,15 +28,9 @@ int	main(void)
 //	fd = 1;
 	if (fd < 0)
 		return (1);
-
-	line = get_next_line(fd);
-	printf("%s", line);
-	free(line);
-	while (line)
+	while ((line = get_next_line(fd)))
 	{
-		line = get_next_line(fd);
-		if (line)
-			printf("%s", line);
+		printf("%s", line);
 		free(line);
 	}
 	close(fd);

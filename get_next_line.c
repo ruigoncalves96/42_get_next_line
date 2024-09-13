@@ -6,7 +6,7 @@
 /*   By: randrade <randrade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 18:57:15 by randrade          #+#    #+#             */
-/*   Updated: 2024/09/11 18:58:11 by randrade         ###   ########.fr       */
+/*   Updated: 2024/09/13 19:43:17 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	new_line = NULL;
+	buffer[BUFFER_SIZE] = '\0';
 	if (!buffer[0])
 	{
 		if (read(fd, buffer, BUFFER_SIZE) < 0)
