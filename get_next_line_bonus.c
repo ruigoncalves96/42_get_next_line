@@ -17,7 +17,7 @@ char	*get_next_line(int fd)
 	static char	buffer[FOPEN_MAX][BUFFER_SIZE + 1];
 	char		*new_line;
 
-	if (fd < 0 || fd > FOPEN_MAX || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd >= FOPEN_MAX || BUFFER_SIZE <= 0)
 		return (NULL);
 	new_line = NULL;
 	buffer[fd][BUFFER_SIZE] = '\0';
